@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播</title>
+
+    <script src="./Jquery.js"></script>
+   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+            background-color: aqua;
+        }
+
+        img {
+            width: 500px;
+            height: 400px;
+        }
+
+        .wrap {
+            width: 1000px;
+            height: 400px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        ul {
+            width: 3000px;
+            list-style: none;
+            background-color: black;
+
+        }
+
+        li {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hahahahah</h1>
+    <div class="wrap">
+        <ul>
+            <li><img src="image/1.jpg" alt=""></li>
+            <li><img src="image/2.jpg" alt=""></li>
+            <li><img src="image/3.jpg" alt=""></li>
+            <li><img src="image/4.jpg" alt=""></li>
+            <li><img src="image/1.jpg" alt=""></li>
+            <li><img src="image/2.jpg" alt=""></li>
+        </ul>
+    </div>
+ 
+    <script>
+
+        $(function () {
+            var index = 0;
+            /*        var timer = setInterval(function(){
+                       index-=5;
+                       if(index<=-2000){
+                           index=0
+                       }
+                       $('ul').css('marginLeft',index)
+                   },15); */
+
+            var timer;
+            function lunbo() {
+                timer = setInterval(function () {
+                    index -= 5;
+                    if (index <= -2000) {
+                        index = 0
+                    }
+                    $('ul').css('marginLeft', index)
+                }, 15)
+
+            }
+            lunbo();
+            // 监听li的鼠标移入移出事件
+            $('li').mouseenter(function () {
+                clearInterval(timer);
+                $(this).fadeTo(500, 1).siblings().fadeTo(500, .6)
+
+            })
+            $('li').mouseleave(function () {
+                lunbo();
+                $('li').stop().fadeTo(500, 1)
+            })
+
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>
