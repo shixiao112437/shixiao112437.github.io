@@ -1,110 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>轮播</title>
-
-    <script src="./Jquery.js"></script>
-   
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            height: 100%;
-            background-color: aqua;
-        }
-
-        img {
-            width: 500px;
-            height: 400px;
-        }
-
-        .wrap {
-            width: 1000px;
-            height: 400px;
-            border: 1px solid #ccc;
-            margin: 100px auto;
-            overflow: hidden;
-        }
-
-        ul {
-            width: 3000px;
-            list-style: none;
-            background-color: black;
-
-        }
-
-        li {
-            float: left;
-        }
-        h1{
-            text-align: center;
-            font-size: 30px;
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>你好</h1>
-    <div class="wrap">
-        <ul>
-            <li><img src="image/1.jpg" alt=""></li>
-            <li><img src="image/2.jpg" alt=""></li>
-            <li><img src="image/3.jpg" alt=""></li>
-            <li><img src="image/4.jpg" alt=""></li>
-            <li><img src="image/1.jpg" alt=""></li>
-            <li><img src="image/2.jpg" alt=""></li>
-        </ul>
-    </div>
- 
-    <script>
-
-        $(function () {
-            var index = 0;
-            /*        var timer = setInterval(function(){
-                       index-=5;
-                       if(index<=-2000){
-                           index=0
-                       }
-                       $('ul').css('marginLeft',index)
-                   },15); */
-
-            var timer;
-            function lunbo() {
-                timer = setInterval(function () {
-                    index -= 5;
-                    if (index <= -2000) {
-                        index = 0
-                    }
-                    $('ul').css('marginLeft', index)
-                }, 15)
-
-            }
-            lunbo();
-            // 监听li的鼠标移入移出事件
-            $('li').mouseenter(function () {
-                clearInterval(timer);
-                $(this).fadeTo(500, 1).siblings().fadeTo(500, .6)
-
-            })
-            $('li').mouseleave(function () {
-                lunbo();
-                $('li').stop().fadeTo(500, 1)
-            })
-
-
-
-        })
-
-
-    </script>
-</body>
-
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/doc/assets/css/0.styles.6eaf6c48.css" as="style"><link rel="preload" href="/doc/assets/js/app.b1e51596.js" as="script"><link rel="preload" href="/doc/assets/js/2.87f4738b.js" as="script"><link rel="preload" href="/doc/assets/js/10.dd71a1da.js" as="script"><link rel="prefetch" href="/doc/assets/js/11.d7d0754a.js"><link rel="prefetch" href="/doc/assets/js/12.3d8d48de.js"><link rel="prefetch" href="/doc/assets/js/13.2a6c38f5.js"><link rel="prefetch" href="/doc/assets/js/14.4e4b3c52.js"><link rel="prefetch" href="/doc/assets/js/3.30e474ee.js"><link rel="prefetch" href="/doc/assets/js/4.72a8511c.js"><link rel="prefetch" href="/doc/assets/js/5.764aa088.js"><link rel="prefetch" href="/doc/assets/js/6.6621b719.js"><link rel="prefetch" href="/doc/assets/js/7.f8c73288.js"><link rel="prefetch" href="/doc/assets/js/8.d55eac57.js"><link rel="prefetch" href="/doc/assets/js/9.59642a25.js">
+    <link rel="stylesheet" href="/doc/assets/css/0.styles.6eaf6c48.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/doc/" aria-current="page" class="home-link router-link-exact-active router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/doc/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  首页
+</a></div><div class="nav-item"><a href="/doc/Redis/intro.html" class="nav-link">
+  redis
+</a></div><div class="nav-item"><a href="/doc/Docker/intro.html" class="nav-link">
+  docker
+</a></div><div class="nav-item"><a href="/doc/Javascript/intro.html" class="nav-link">
+  javascript
+</a></div><div class="nav-item"><a href="/doc/Webpack/intro.html" class="nav-link">
+  webpack
+</a></div><div class="nav-item"><a href="/doc/React/intro.html" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/doc/Interview/call.html" class="nav-link">
+  面试题
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/doc/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  首页
+</a></div><div class="nav-item"><a href="/doc/Redis/intro.html" class="nav-link">
+  redis
+</a></div><div class="nav-item"><a href="/doc/Docker/intro.html" class="nav-link">
+  docker
+</a></div><div class="nav-item"><a href="/doc/Javascript/intro.html" class="nav-link">
+  javascript
+</a></div><div class="nav-item"><a href="/doc/Webpack/intro.html" class="nav-link">
+  webpack
+</a></div><div class="nav-item"><a href="/doc/React/intro.html" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/doc/Interview/call.html" class="nav-link">
+  面试题
+</a></div> <!----></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><img src="/doc/hero.jpg" alt="hero"> <h1 id="main-title">
+      Hero 标题
+    </h1> <p class="description">
+      Hero 副标题
+    </p> <p class="action"><a href="/doc/Docker/intro/" class="nav-link action-button">
+  快速上手 →
+</a></p></header> <div class="features"><div class="feature"><h2>简洁至上</h2> <p>以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。</p></div><div class="feature"><h2>Vue驱动</h2> <p>享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。</p></div><div class="feature"><h2>高性能</h2> <p>VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。</p></div></div> <div class="theme-default-content custom content__default"></div> <div class="footer">
+    MIT Licensed | Copyright © 2018-present Evan You
+  </div></main></div><div class="global-ui"></div></div>
+    <script src="/doc/assets/js/app.b1e51596.js" defer></script><script src="/doc/assets/js/2.87f4738b.js" defer></script><script src="/doc/assets/js/10.dd71a1da.js" defer></script>
+  </body>
 </html>
