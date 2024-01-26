@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事务（multi）</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.bf7e96f2.css" as="style"><link rel="preload" href="/assets/js/app.0fef5238.js" as="script"><link rel="preload" href="/assets/js/2.14e7ba15.js" as="script"><link rel="preload" href="/assets/js/28.2045af80.js" as="script"><link rel="prefetch" href="/assets/js/10.683fc858.js"><link rel="prefetch" href="/assets/js/11.141ee541.js"><link rel="prefetch" href="/assets/js/12.68383503.js"><link rel="prefetch" href="/assets/js/13.06ed2c96.js"><link rel="prefetch" href="/assets/js/14.b4738115.js"><link rel="prefetch" href="/assets/js/15.0b8b4726.js"><link rel="prefetch" href="/assets/js/16.53f98642.js"><link rel="prefetch" href="/assets/js/17.d0c30d96.js"><link rel="prefetch" href="/assets/js/18.57881b73.js"><link rel="prefetch" href="/assets/js/19.53f1812e.js"><link rel="prefetch" href="/assets/js/20.ce4651aa.js"><link rel="prefetch" href="/assets/js/21.48587ca5.js"><link rel="prefetch" href="/assets/js/22.54ab2641.js"><link rel="prefetch" href="/assets/js/23.7238b8c0.js"><link rel="prefetch" href="/assets/js/24.6038ba44.js"><link rel="prefetch" href="/assets/js/25.e5092991.js"><link rel="prefetch" href="/assets/js/26.80df857b.js"><link rel="prefetch" href="/assets/js/27.633c88c3.js"><link rel="prefetch" href="/assets/js/29.ae868d48.js"><link rel="prefetch" href="/assets/js/3.34a3573a.js"><link rel="prefetch" href="/assets/js/30.4e2e4cd1.js"><link rel="prefetch" href="/assets/js/31.614a56df.js"><link rel="prefetch" href="/assets/js/32.20471cc5.js"><link rel="prefetch" href="/assets/js/33.69e31e9b.js"><link rel="prefetch" href="/assets/js/34.c832a129.js"><link rel="prefetch" href="/assets/js/4.96eef154.js"><link rel="prefetch" href="/assets/js/5.44b5b6ab.js"><link rel="prefetch" href="/assets/js/6.c5031ded.js"><link rel="prefetch" href="/assets/js/7.c2d5a15f.js"><link rel="prefetch" href="/assets/js/8.47bb9fc3.js"><link rel="prefetch" href="/assets/js/9.27938bac.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bf7e96f2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/Arithmetic/index.html" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/Interview/call.html" class="nav-link">
+  面试题相关
+</a></div><div class="nav-item"><a href="/Redis/intro.html" class="nav-link">
+  redis
+</a></div><div class="nav-item"><a href="/Docker/intro.html" class="nav-link">
+  docker镜像
+</a></div><div class="nav-item"><a href="/Webpack/intro.html" class="nav-link">
+  webpack
+</a></div><div class="nav-item"><a href="/React/intro.html" class="nav-link">
+  react基础
+</a></div><div class="nav-item"><a href="/Typescript/type.html" class="nav-link">
+  typescript
+</a></div><div class="nav-item"><a href="/Work/uniapp.html" class="nav-link">
+  董淳菀
+</a></div><div class="nav-item"><a href="/ES6/index.html" class="nav-link">
+  ES6
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/Arithmetic/index.html" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/Interview/call.html" class="nav-link">
+  面试题相关
+</a></div><div class="nav-item"><a href="/Redis/intro.html" class="nav-link">
+  redis
+</a></div><div class="nav-item"><a href="/Docker/intro.html" class="nav-link">
+  docker镜像
+</a></div><div class="nav-item"><a href="/Webpack/intro.html" class="nav-link">
+  webpack
+</a></div><div class="nav-item"><a href="/React/intro.html" class="nav-link">
+  react基础
+</a></div><div class="nav-item"><a href="/Typescript/type.html" class="nav-link">
+  typescript
+</a></div><div class="nav-item"><a href="/Work/uniapp.html" class="nav-link">
+  董淳菀
+</a></div><div class="nav-item"><a href="/ES6/index.html" class="nav-link">
+  ES6
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Redis</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Redis/intro.html" class="sidebar-link">Redis 数据类型</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="事务-multi"><a href="#事务-multi" class="header-anchor">#</a> 事务（multi）</h1> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>一个事务中的命令要么执行，要么都不执行</p> <div class="language- extra-class"><pre class="language-text"><code>开启事务
+redis 127.0.0.1:6379&gt; MULTI 
+OK
+
+redis 127.0.0.1:6379&gt; SET book-name &quot;Mastering C++ in 21 days&quot;
+QUEUED
+
+redis 127.0.0.1:6379&gt; GET book-name
+QUEUED
+
+redis 127.0.0.1:6379&gt; SADD tag &quot;C++&quot; &quot;Programming&quot; &quot;Mastering Series&quot;
+QUEUED
+
+redis 127.0.0.1:6379&gt; SMEMBERS tag
+QUEUED
+
+退出事务
+redis 127.0.0.1:6379&gt; EXEC
+
+</code></pre></div><h2 id="watch"><a href="#watch" class="header-anchor">#</a> watch</h2> <p>可以监听一个字段，如果这个字段被修改，后续的事务是无法进行的。</p> <p>如果使用watch来监听一个含有过期时间的键，该键事件到期自动删除并不会被watch监听到</p> <h2 id="过期时间expire-pexoire-ms"><a href="#过期时间expire-pexoire-ms" class="header-anchor">#</a> 过期时间expire（pexoire   ms）</h2> <p>expire key time   返回值 OK</p> <p>ttl  key  剩余时间 （-1 永久存在  没有设置expire；-2 字段不存在）</p> <p>expireat和expireat  Unix时间</p> <h2 id="访问频率限制"><a href="#访问频率限制" class="header-anchor">#</a> 访问频率限制</h2> <h2 id="实现缓存"><a href="#实现缓存" class="header-anchor">#</a> 实现缓存</h2></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0fef5238.js" defer></script><script src="/assets/js/2.14e7ba15.js" defer></script><script src="/assets/js/28.2045af80.js" defer></script>
+  </body>
+</html>
